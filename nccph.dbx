@@ -3,7 +3,6 @@
 \DeclareDatamodelEntryfields{rauthor,role}
 \DeclareDatamodelFields[type=field,datatype=literal]{sigla}
 \DeclareDatamodelEntryfields{sigla}
-%
 \DeclareDatamodelFields[type=field,datatype=literal]{tomus}
 \DeclareDatamodelEntryfields{tomus}
 \DeclareDatamodelFields[type=field,datatype=literal]{fasciculus}

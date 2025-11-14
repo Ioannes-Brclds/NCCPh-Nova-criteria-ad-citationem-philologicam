@@ -1,29 +1,28 @@
-\ProvidesFile{nccph.bbx}[2025/11/13 NCCPh= NOVA CRITERIA AD CITATIONEM PHILOLOGICAM]
+\ProvidesFile{nccph.bbx}[2025/11/13 NCCPh = "Nova criteria ad citationem philologicam"]
 \RequireBibliographyStyle{standard}
-
+%
 \setlength{\bibitemsep}{0pt}
 \setlength{\parskip}{0pt}
-
+%
 \ExecuteBibliographyOptions{giveninits=true, maxnames=99}
 \DeclareNameAlias{default}{family-given}
 \DeclareNameAlias{sortname}{family-given}
-
+%
 \protected\def\mkbibnamelastdelim{\ifnum\value{listcount}>\c@maxnames\else\text{\addspace\&}\fi\addspace}
 \protected\def\mkbibnameyeardelim{\addspace}
-
+%
 \DeclareFieldFormat{title}{\mkbibemph{#1}}
 \DeclareFieldFormat[article]{title}{``#1''}
 \DeclareFieldFormat[online]{title}{``#1''}
 \DeclareFieldFormat[incollection]{booktitle}{\mkbibemph{#1}}
-
 \DeclareFieldFormat{journaltitle}{#1}
 \DeclareFieldFormat{url}{\normalfont\url{#1}}
 \DeclareFieldFormat{pages}{#1}
 \DeclareFieldFormat{volume}{#1}
-
+%
 \newbibmacro*{quickdate}{%
   \iffieldundef{year}{\printtext[parens]{s.\,f.}}{\printtext[parens]{\printdate}}}
-
+%
 \newbibmacro*{printvolumetome}{%
   \iffieldundef{volume}{}{%
     \setunit{\addspace}%
@@ -41,7 +40,7 @@
     \addperiod
   }%
 }
-
+%
 \newbibmacro*{serie+number}{%
     \iffieldundef{series}{}{%
         \printtext[parens]{%
@@ -60,8 +59,7 @@
         \setunit{\addcomma\space}%
     }}{}%
 }
-
-
+%
 \DeclareBibliographyDriver{book}{%
   \usebibmacro{begentry}%
   \printnames{author}%
